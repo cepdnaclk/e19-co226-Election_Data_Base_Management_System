@@ -1,0 +1,31 @@
+{
+    "team": [
+        {
+            "name": "Thevambikai T.",
+            "email": "e19494@eng.pdn.ac.lk",
+            "eNumber": "E/19/494"
+        },
+        {
+            "name": "Harishanth A.",
+            "email": "e19133eng.pdn.ac.lk",
+            "eNumber": "E/19/133"
+        },
+        {
+            "name": "Shantosh M.",
+            "email": "e19371@eng.pdn.ac.lk",
+            "eNumber": "E/19/371"
+        },
+        {
+            "name": "Hayanan T.",
+            "email": "e19137@eng.pdn.ac.lk",
+            "eNumber": "E/19/137"
+        }
+    ],
+    "supervisors": [
+        {
+            "name": "Dr. Damayanthi Herath",
+            "email": "damayanthiherath@eng.pdn.ac.lk"
+        }
+    ],
+    "tags": ["CO227","Crop Modelling Tool"]
+}

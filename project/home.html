@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name">
+    <title>Election Database Management</title>
+    <style>
+      body {
+        background-image: url('pexels-fwstudio-129731.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Comic Sans MS", cursive;
+        color: #fff;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      h1 {
+        font-size: 64px;
+        margin-top: 0px;
+        text-shadow: 2px 2px 4px rgba(14, 8, 8, 0.5);
+        color: #ffffff; /* Updated color to white */
+        text-align: center;
+        display: inline-block;
+        background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4));
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+
+      h2 {
+        margin-top: 40px;
+      }
+
+      .menu {
+        display: flex;
+        justify-content: flex-end; /* Align menu items to the right */
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .menu a {
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #d58506;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
+      }
+
+      .menu a:hover {
+        background-color: #cc9735;
+      }
+
+      .tabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 20px;
+      }
+
+      .tab {
+        padding: 10px 20px;
+        background-color: #190b2e;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .tab.active {
+        background-color: #190b2e;
+      }
+
+      .content {
+        display: none;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #333;
+        border-radius: 0 5px 5px 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .content.active {
+        display: block;
+      }
+
+      .burger {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+
+      .burger div {
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+      }
+
+      @media (max-width: 768px) {
+        .menu, .tabs {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .burger {
+          display: block;
+        }
+
+        .menu, .tabs, .content {
+          margin-bottom: 20px;
+        }
+
+        .content {
+          border-radius: 5px;
+        }
+
+        .burger.active div:nth-child(1) {
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .burger.active div:nth-child(2) {
+          opacity: 0;
+        }
+
+        .burger.active div:nth-child(3) {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+      }
+
+      .gradient {
+        background: linear-gradient(to right, #f12711, #f5af19);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      /* Additional Function: Alert Message */
+      .alert {
+        padding: 10px;
+        background-color: #ffa500;
+        color: #fff;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+
+      /* Additional Function: Bounce Animation */
+      .rotate {
+        animation: rotate 1s infinite;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          transform: scale(1.2) rotate(0deg);
+        }
+        100% {
+          transform: scale(1) rotate(0deg);
+        }
+      }
+
+      .logo {
+        margin-top: 10px; /* Added margin-bottom for logo spacing */
+      }
+
+    </style>
+
+</head>
+<body>
+    
+  <div class="menu">
+    <a href="login.html">LOGIN</a>
+  </div>
+
+  <h1>Welcome to Election Database Management</h1>
+
+  <div class="menu">
+    <a href="voters.php">Voters List</a>
+    <a href="candidates.php">Candidate List</a>
+    <a href="politicalparties.php">Political Parties</a>
+    <a href="pollingstations.php">Polling Stations</a>
+    <a href="electioncommittees.php">Election Committee</a>
+    <a href="electioncommitteemembers.php">Election Committee Members</a>
+    <a href="elections.php">Election</a>
+    <a href="electionresults.php">Election Result</a>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active">Home</div>
+    <div class="tab">About</div>
+    <div class="tab">Contact</div>
+  </div>
+
+  <div class="content active">
+    <h2>Welcome to the Election Database Management homepage!</h2>
+    <p>Our Election Database Management system is designed to streamline and simplify the management of elections and related data. With our powerful and user-friendly platform, you can efficiently handle various aspects of the election process, ensuring transparency, accuracy, and security.</p>
+    <p>Key features of our system include:</p>
+    <ul>
+      <li>Effortless management of voter information, candidate details, political parties, and polling stations.</li>
+      <li>Robust election committee management, allowing you to easily organize and coordinate election activities.</li>
+      <li>Seamless integration with voting systems, enabling smooth candidate voter management.</li>
+      <li>Location tracking and mapping for effective election planning and resource allocation.</li>
+      <li>Comprehensive reporting and analytics to gain valuable insights into election results and participation.</li>
+    </ul>
+    <p>Our goal is to provide election organizers, administrators, and stakeholders with a reliable and efficient tool that empowers them to conduct fair and successful elections. Whether you are managing local elections or larger-scale national campaigns, our Election Database Management system has you covered.</p>
+    <p>Explore the menu above to access different modules and functionalities of our system. If you have any questions or need assistance, please don't hesitate to contact our support team.</p>
+  </div>
+  
+  
+
+  <div class="content">
+    <h2>About</h2>
+    <p>The Election Database Management system is a comprehensive software solution designed to revolutionize the way elections are managed. Our platform combines advanced technology, data management, and user-friendly interfaces to ensure efficient, transparent, and secure electoral processes.</p>
+    <p>At Election Database Management, we understand the critical importance of elections in democratic societies. Our system aims to address the challenges faced by election organizers, administrators, and stakeholders by providing a centralized database and intuitive tools that streamline every stage of the electoral process.</p>
+    <p>With our system, you can easily manage voter registration, candidate nominations, political party affiliations, polling station assignments, election committee coordination, and much more. The platform offers real-time data updates, secure data storage, and advanced reporting capabilities to facilitate informed decision-making and ensure the integrity of the electoral process.</p>
+    <p>We prioritize the security and privacy of sensitive election data. Our system incorporates robust security measures, including encryption protocols and access controls, to safeguard the integrity and confidentiality of voter information, election results, and other critical data.</p>
+    <p>Our team of experienced developers, election management experts, and support staff are committed to delivering a reliable and user-friendly platform that meets the unique needs of each election. We strive to continually enhance our system based on user feedback and industry best practices, ensuring that Election Database Management remains at the forefront of election management technology.</p>
+    <p>Join us in embracing the power of technology to transform the electoral landscape and uphold the principles of democracy. Together, let's make elections more accessible, transparent, and efficient.</p>
+  </div>
+  
+
+  <div class="content">
+    <h2>Contact</h2>
+    <p>Thank you for your interest in the Election Database Management system. We value your feedback, inquiries, and suggestions. Please feel free to reach out to us using the contact information provided below:</p>
+    <p><strong>Phone:</strong> +1-123-456-7890</p>
+    <p><strong>Email:</strong> info@edbmanagement.com</p>
+    <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+    <p>Our dedicated support team is available to assist you with any questions or concerns you may have regarding our system. Whether you are an election organizer, administrator, or a stakeholder, we are here to provide prompt and reliable assistance.</p>
+    <p>For technical support or inquiries about our software features, please contact our support team. If you have any suggestions or feedback to help us improve our system, we would love to hear from you.</p>
+    <p>Stay connected with us through our social media channels for the latest updates and news:</p>
+    <ul>
+      <li><a href="https://www.facebook.com/edbmanagement">Facebook</a></li>
+      <li><a href="https://twitter.com/edbmanagement">Twitter</a></li>
+      <li><a href="https://www.linkedin.com/company/edbmanagement">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/edbmanagement">Instagram</a></li>
+    </ul>
+    <p>We look forward to hearing from you and serving you in your election management needs!</p>
+  </div>
+  
+
+  <a href="#" id="logo-link" style="background-color: transparent; border: none;">
+    <img src="hari.png" alt="Your Logo" class="rotate bounce logo" width="100">
+  </a>
+
+  <div class="alert">
+    <strong>Click on the logo to see the message.</strong> 
+  </div>
+
+  <div class="burger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <script>
+    // Additional Function: Display Alert Message
+    const logoLink = document.getElementById('logo-link');
+    logoLink.addEventListener('click', () => {
+      alert('Welcome to the Election Database Management homepage!');
+    });
+
+    // Toggle Tabs
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.content');
+    const burger = document.querySelector('.burger');
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((tab) => tab.classList.remove('active'));
+        contents.forEach((content) => content.classList.remove('active'));
+        tab.classList.add('active');
+        contents[index].classList.add('active');
+      });
+    });
+
+    // Toggle Burger Menu
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('active');
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Election Database Login</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      width: 360px;
+      padding: 40px;
+      margin: 0 auto;
+      margin-top: 100px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #d2951b; /* Facebook Blue */
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      color: #1c1e21; /* Facebook Text Color */
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    
+    .form-group input[type="submit"] {
+      background-color: #d2951b; /* Facebook Blue */
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    .form-group input[type="submit"]:hover {
+      background-color: #d2951b; /* Slightly Darker Blue on Hover */
+    }
+    
+    .show-password-icon {
+      position: relative;
+      cursor: pointer;
+    }
+    
+    .show-password-icon::before {
+      content: "\1F441"; /* Unicode for the eye symbol */
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      color: #555; /* Darker color for the icon */
+    }
+    
+    .show-password-icon.visible::before {
+      content: "\1F576"; /* Unicode for the eye-slash symbol */
+    }
+    
+    .create-account {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .create-account a {
+      color: #d2951b; 
+      text-decoration: none;
+    }
+    
+    .create-account a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Enter Database</h2>
+    <form action="login.php" method="post">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <div class="show-password-icon" onclick="togglePasswordVisibility()">
+          <input type="password" id="password" name="password" required>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <input type="submit" value="Log In">
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById("password");
+      const showPasswordIcon = document.querySelector(".show-password-icon");
+      
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        showPasswordIcon.classList.add("visible");
+      } else {
+        passwordInput.type = "password";
+        showPasswordIcon.classList.remove("visible");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Polling Station Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    form {
+      width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    input[type="time"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Polling Station Details</h1>
+
+  <form action="polling_station.php" method="POST">
+    <label for="station-id">Station ID:</label>
+    <input type="number" id="station-id" name="station-id" required><br><br>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required><br><br>
+
+    <label for="open-time">Open Time:</label>
+    <input type="time" id="open-time" name="open-time" required><br><br>
+
+    <label for="close-time">Close Time:</label>
+    <input type="time" id="close-time" name="close-time" required><br><br>
+
+    <label for="com-no">Committee NO:</label>
+    <input type="number" id="com-no" name="com-no" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email"><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Candidate Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    form {
+      width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .error-message {
+      color: red;
+      margin-top: 5px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Enter Candidate Details</h1>
+
+  <form action="submit_candidate.php" method="POST" onsubmit="return validateForm()">
+    <label for="candidate-firstname">Candidate First Name:</label>
+    <input type="text" id="candidate-firstname" name="candidate-firstname" required>
+
+    <label for="candidate-lastname">Candidate Last Name:</label>
+    <input type="text" id="candidate-lastname" name="candidate-lastname" required>
+
+    <label for="candidate-id">Candidate ID:</label>
+    <input type="number" id="candidate-id" name="candidate-id" required>
+
+    <label for="candidate-age">Candidate Age:</label>
+    <input type="number" id="candidate-age" name="candidate-age" required>
+
+    <label for="candidate-party">Political Party:</label>
+    <input type="text" id="candidate-party" name="candidate-party" required>
+
+    <label for="party-id">Party ID:</label>
+    <input type="number" id="party-id" name="party-id" required>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm() {
+      var ageInput = document.getElementById('candidate-age');
+      var age = parseInt(ageInput.value);
+
+      if (age < 18 || age > 100) {
+        var errorMessage = document.createElement('span');
+        errorMessage.classList.add('error-message');
+        errorMessage.textContent = 'Age must be between 18 and 100';
+        ageInput.parentNode.appendChild(errorMessage);
+        ageInput.focus();
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>
