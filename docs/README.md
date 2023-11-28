@@ -76,5 +76,3 @@ Our Election Database Management System provides a comprehensive solution for tr
 **Thank You for Choosing Our Election Database Management System.**
 
 ---
-
-Feel free to adjust the content as needed for your website's design and style.
