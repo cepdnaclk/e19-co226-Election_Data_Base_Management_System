@@ -1,11 +1,6 @@
 {
     "team": [
         {
-            "name": "Thevambikai T.",
-            "email": "e19494@eng.pdn.ac.lk",
-            "eNumber": "E/19/494"
-        },
-        {
             "name": "Harishanth A.",
             "email": "e19133eng.pdn.ac.lk",
             "eNumber": "E/19/133"
@@ -23,9 +18,9 @@
     ],
     "supervisors": [
         {
-            "name": "Dr. Damayanthi Herath",
-            "email": "damayanthiherath@eng.pdn.ac.lk"
+            "name": " Prof. Manjula Sandirigama",
+            "email": "manjula.sandirigama@eng.pdn.ac.lk"
         }
     ],
-    "tags": ["CO227","Crop Modelling Tool"]
+    "tags": ["CO226","Database Systems","Election-Database-Management-System"]
 }
